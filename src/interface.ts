@@ -22,3 +22,13 @@ export interface AuthContextInterface{
     login:(email: string, password: string) => void
 };
 
+export interface initTodoLists{
+    titles:Array<string>,
+    expandedList:string | boolean,
+    handleExpandChange:(expanded: boolean | string) => void,
+}
+
+export interface TodoListsState{
+ title:string,
+ todos:Array<any>
+}

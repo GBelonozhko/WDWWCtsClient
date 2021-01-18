@@ -28,6 +28,10 @@ const AuthContextProvider: React.FC = (props) => {
         console.log(token)
     }
 
+    
+
+
+
     return (
         <AuthContext.Provider value ={{token, userId, error, loading, login}}>{props.children}</AuthContext.Provider>
     )

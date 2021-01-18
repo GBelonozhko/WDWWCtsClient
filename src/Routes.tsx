@@ -17,7 +17,7 @@ const Routes: React.FC = () => {
             <Route path="/SignUp" exact component={SignUp} />
             <Route path="/SignIn" exact component={SignIn} />
             <Route path="/dashboard" exact component={Dashboard}/>
-            <Route path="/TodoList" exact component={TodoList}/>
+            <Route path="/TodoListDashboard" exact component={TodoList}/>
             </Switch>
 
         </BrowserRouter>

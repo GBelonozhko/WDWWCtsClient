@@ -1,5 +1,5 @@
 import React from 'react';
-import { AuthContextInterface, AuthState } from '../interface';
+import { AuthContextInterface } from '../interface';
 
 const AuthContext = React.createContext<AuthContextInterface>({
     token: '',

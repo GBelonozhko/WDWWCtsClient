@@ -1,12 +1,11 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import Container from "@material-ui/core/Container";
 import TextField from "@material-ui/core/TextField";
 import Button from "@material-ui/core/Button";
-import Grid from "@material-ui/core/Grid";
-import { Avatar, Card, createStyles, makeStyles, Theme, Typography } from "@material-ui/core";
+import { Avatar, createStyles, makeStyles, Theme, Typography } from "@material-ui/core";
 import { GiKeyLock } from "react-icons/gi";
 import { green } from "@material-ui/core/colors";
-import classes from "*.module.css";
+import AuthContext from '../context/authContext';
 
 const SignIn: React.FC = () => {
   const [values, setValues] = useState({
@@ -17,7 +16,14 @@ const SignIn: React.FC = () => {
   });
 
   const { email, password, loading, redirectToReferrer } = values;
+  
+  const authCtx = useContext(AuthContext)
 
+  const signin = (event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
+    
+    authCtx.login( "odessagreg@gmail.com", "rock92")
+   
+  };
   
 
   const handleChange = (name: string) => (event: any) => {
@@ -63,7 +69,7 @@ const classes = useStyles();
           variant='outlined'
         />
       </div>
-      <Button variant='contained' color='primary' fullWidth>
+      <Button variant='contained' color='primary' fullWidth onClick={(event)=>signin(event)}>
         submit
       </Button>
     </Container>
