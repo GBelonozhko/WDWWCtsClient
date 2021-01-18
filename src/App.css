@@ -13,6 +13,17 @@
   }
 }
 
+.marginTopSignIn{
+  margin-top: 4rem;
+}
+
+
+
+.spaceY{
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
